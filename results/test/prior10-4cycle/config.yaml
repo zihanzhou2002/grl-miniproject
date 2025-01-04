@@ -1,0 +1,46 @@
+batch_size: 64
+bn: true
+data_path: ./datasets
+dataset: sym_4cycles
+debug: false
+dropout: 0.0
+early_stop:
+  patience: 150
+graph_pooling: mean
+hid_size: 16
+imle_configs:
+  batchnorm: true
+  emb_hid_size: 16
+  gnn_layer: 4
+  mlp_layer: 1
+  num_train_ensemble: 50
+  num_val_ensemble: 50
+inter_graph_pooling: cat
+log_path: ./logs
+lr: 0.001
+lr_decay:
+  decay_rate: 0.5
+  mode: max
+  patience: 50
+max_epochs: 700
+min_epochs: 700
+mlp_layers_intergraph: 1
+mlp_layers_intragraph: 1
+model: pr-mpnn
+num_convlayers: 4
+num_runs: 5
+reg: 0.0
+residual: true
+sample_configs:
+  candid_pool: 1024
+  directed: true
+  ensemble: 10
+  heuristic: longest_path
+  include_original_graph: false
+  merge_priors: false
+  sample_k: 2
+  sample_k2: 2
+  separate: false
+use_wandb: true
+wandb_name: prior10-4cycle
+wandb_project: grl-miniproject-4cycle
